@@ -1,0 +1,20 @@
+{
+    "name": "Webframe Uploader",
+    "version": "1.0",
+    "description": "capture screenshot of webpage and upload to webframe.xyz",
+    "permissions": ["storage", "activeTab", "tabs"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action" : {},
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "manifest_version": 2
+  }
